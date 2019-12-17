@@ -117,4 +117,12 @@ public class QuantityTest
         boolean compareCheck = centimeter1.compare(centimeter2);
         Assert.assertFalse(compareCheck);
     }
+
+    @Test
+    public void given1Feetand1Feet_ShouldReturnEqualLength()
+    {
+        Length feet1 = new Length(Length.Unit.FEET,1.0);
+        boolean equals = feet1.equals(feet1);
+        Assert.assertTrue(equals);
+    }
 }
