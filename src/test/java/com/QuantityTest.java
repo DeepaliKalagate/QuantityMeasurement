@@ -125,4 +125,13 @@ public class QuantityTest
         boolean equals = feet1.equals(feet1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given1Feetand1FeetNull_ShouldReturnNotEqualLength()
+    {
+        Length feet1 = new Length(Length.Unit.FEET,1.0);
+        Length feet2=null;
+        boolean equals = feet1.equals(feet2);
+        Assert.assertFalse(equals);
+    }
 }
