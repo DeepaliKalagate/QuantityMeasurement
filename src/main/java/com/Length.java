@@ -7,7 +7,7 @@ public class Length
 
     public enum Unit
     {
-        FEET,INCH
+        FEET,INCH,CENTIMETER
     }
 
     public Length(Unit unit,double value)

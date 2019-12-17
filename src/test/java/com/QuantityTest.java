@@ -110,11 +110,11 @@ public class QuantityTest
     }
 
     @Test
-    public void given1Inchesand1Feet_Whencompared_ItShouldReturnNotEqualLength()
+    public void given1CMand1CM_Whencompared_ItShouldReturnFalse()
     {
-        Length inch1 = new Length(Length.Unit.INCH,1.0);
-        Length feet1 = new Length(Length.Unit.FEET,1.0);
-        boolean compareCheck = inch1.compare(feet1);
+        Length centimeter1 = new Length(Length.Unit.CENTIMETER,12.0);
+        Length centimeter2 = new Length(Length.Unit.CENTIMETER,1.0);
+        boolean compareCheck = centimeter1.compare(centimeter2);
         Assert.assertFalse(compareCheck);
     }
 }
