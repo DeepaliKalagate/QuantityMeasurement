@@ -143,4 +143,13 @@ public class QuantityTest
         boolean equals = feet1.compare(yard1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given1Feetand1Yard_ShouldReturnNotEqualLength()
+    {
+        Length feet1 = new Length(Unit.FEET,1.0);
+        Length yard1=new Length(Unit.YARD, 1.0);
+        boolean equals = feet1.compare(yard1);
+        Assert.assertFalse(equals);
+    }
 }
