@@ -26,6 +26,8 @@ public class Length {
             return Double.compare(this.value , thatLength.value / YARD_TO_INCHES) == 0;
         if (this.unit.equals(Unit.INCH) && thatLength.unit.equals(Unit.YARD))
             return Double.compare(this.value/YARD_TO_INCHES , thatLength.value) == 0;
+        if (this.unit.equals(Unit.YARD) && thatLength.unit.equals(Unit.FEET))
+            return Double.compare(this.value , thatLength.value /FEET_TO_YARD) == 0;
         return false;
     }
     @Override
