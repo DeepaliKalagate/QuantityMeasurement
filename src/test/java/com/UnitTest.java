@@ -19,4 +19,12 @@ public class UnitTest
         Assert.assertEquals(12.0,unitValue,0.0);
     }
 
+    @Test
+    public  void given1cm_ShouldReturnInInches()
+    {
+        double unitValue = Math.round(Unit.INCH.getUnitValue(1.0));
+        Assert.assertEquals(1.0,unitValue,0.0);
+
+    }
+
 }
