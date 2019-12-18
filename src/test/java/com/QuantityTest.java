@@ -190,4 +190,13 @@ public class QuantityTest
         boolean equals = yard1.compare(feet1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given2Inchand5Cm_ShouldReturnEqualLength()
+    {
+        Length inch1 = new Length(Unit.INCH,2.0);
+        Length centimeter1=new Length(Unit.CENTIMETER, 5.0);
+        boolean equals = inch1.compare(centimeter1);
+        Assert.assertTrue(equals);
+    }
 }
