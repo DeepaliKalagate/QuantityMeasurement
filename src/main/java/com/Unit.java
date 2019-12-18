@@ -14,4 +14,9 @@ public enum Unit
     {
          return Double.compare(length1.unit.value*length1.value,length2.unit.value*length2.value)==0;
     }
+
+    public double addUnitValues(Length length1, Length length2)
+    {
+        return Double.sum(length1.unit.value*length1.value,length2.unit.value*length2.value);
+    }
 }

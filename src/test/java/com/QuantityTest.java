@@ -208,4 +208,13 @@ public class QuantityTest
         boolean equals = centimeter1.compare(inch1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given2Inchesand2Inches_ShouldReturn4Inches()
+    {
+        Length inch1=new Length(Unit.INCH, 2.0);
+        Length inch2 = new Length(Unit.INCH,2.0);
+        double addValuesResult = inch1.addValues(inch2);
+        Assert.assertEquals(4.0,addValuesResult,0.0);
+    }
 }

@@ -32,4 +32,9 @@ public class Length
         return Double.compare(length.value, value) == 0 &&
                 unit == length.unit;
     }
+
+    public double addValues(Length that)
+    {
+        return unit.addUnitValues(this, that);
+    }
 }
