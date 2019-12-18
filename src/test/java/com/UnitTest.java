@@ -22,9 +22,15 @@ public class UnitTest
     @Test
     public  void given1cm_ShouldReturnInInches()
     {
-        double unitValue = Math.round(Unit.INCH.getUnitValue(1.0));
-        Assert.assertEquals(1.0,unitValue,0.0);
-
+        double unitValue = Math.round(Unit.CENTIMETER.getUnitValue(1.0));
+        Assert.assertEquals(0.0,unitValue,0.0);
     }
 
+    @Test
+    public  void given1Yard_ShouldReturnInInches()
+    {
+        double unitValue = Unit.YARD.getUnitValue(1.0);
+        Assert.assertEquals(36.0,unitValue,0.0);
+
+    }
 }
