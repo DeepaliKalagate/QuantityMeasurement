@@ -199,4 +199,13 @@ public class QuantityTest
         boolean equals = inch1.compare(centimeter1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given5cmand2Inch_ShouldReturnEqualLength()
+    {
+        Length centimeter1=new Length(Unit.CENTIMETER, 5.0);
+        Length inch1 = new Length(Unit.INCH,2.0);
+        boolean equals = centimeter1.compare(inch1);
+        Assert.assertTrue(equals);
+    }
 }
