@@ -2,12 +2,8 @@ package com;
 
 public class Length
 {
-    private static final double FEET_TO_INCH = 12.0;
-    private static final double INCH_TO_FEET = 1.0;
-    private static final double FEET_TO_YARD = 3 ;
-    private static final double YARD_TO_INCHES = 36.0;
-    private  Unit unit;
-    private  double value;
+    public   Unit unit;
+    public double value;
 
     public Length(Unit unit, double value)
     {
@@ -17,10 +13,8 @@ public class Length
 
     public boolean compare(Length thatLength)
     {
-        Double firstValue = this.unit.getUnitValue()*this.value;
-        Double secoundValue=thatLength.unit.getUnitValue()*thatLength.value;
-        return (firstValue.compareTo(secoundValue)==0);
-
+        boolean unitValue = unit.getUnitValue(this, thatLength);
+        return unitValue;
     }
 
     @Override

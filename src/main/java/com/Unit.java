@@ -1,8 +1,7 @@
 package com;
-
 public enum Unit
 {
-    FEET(12.0),INCH(1.0),CENTIMETER(12.0),YARD(36.0);
+    FEET(12.0),INCH(1.0),CENTIMETER(5.0),YARD(36.0);
 
     private final double value;
 
@@ -10,8 +9,9 @@ public enum Unit
      {
         this.value = value;
     }
-    public double getUnitValue()
+
+    public boolean getUnitValue(Length length1, Length length2)
     {
-        return this.value;
+         return Double.compare(length1.unit.value*length1.value,length2.unit.value*length2.value)==0;
     }
 }
