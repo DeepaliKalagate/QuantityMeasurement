@@ -10,18 +10,13 @@ public enum Unit
         this.conversionFactor = conversionFactor;
     }
 
-    public boolean getUnitValue(Length length1, Length length2)
+//    public double addUnitValues(Length length1, Length length2)
+//    {
+//        return Double.sum(length1.unit.conversionFactor *length1.value,length2.unit.conversionFactor *length2.value);
+//    }
+
+    public double getUnitValue(double value)
     {
-         return Double.compare(length1.unit.conversionFactor *length1.value,length2.unit.conversionFactor *length2.value)==0;
-    }
-
-    public double addUnitValues(Length length1, Length length2)
-    {
-        return Double.sum(length1.unit.conversionFactor *length1.value,length2.unit.conversionFactor *length2.value);
-    }
-
-    public double getUnitValue(double value) {
-
          return this.conversionFactor*value;
     }
 }

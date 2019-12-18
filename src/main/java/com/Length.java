@@ -13,8 +13,9 @@ public class Length
 
     public boolean compare(Length thatLength)
     {
-        boolean unitValue = unit.getUnitValue(this, thatLength);
-        return unitValue;
+        double unitValue1 = this.unit.getUnitValue(this.value);
+        double unitValue2 = thatLength.unit.getUnitValue(thatLength.value);
+        return Double.compare(unitValue1,unitValue2)==0;
     }
 
     @Override
@@ -33,8 +34,10 @@ public class Length
                 unit == length.unit;
     }
 
-    public double addValues(Length that)
+    public double addValues(Length thatLength)
     {
-        return unit.addUnitValues(this, that);
+        double unitValue1 = this.unit.getUnitValue(this.value);
+        double unitValue2 = thatLength.unit.getUnitValue(thatLength.value);
+        return Double.sum(unitValue1,unitValue2);
     }
 }

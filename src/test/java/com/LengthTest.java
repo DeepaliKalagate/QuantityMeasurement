@@ -209,5 +209,21 @@ public class LengthTest
         Assert.assertTrue(equals);
     }
 
+    @Test
+    public void given2Inchesand2Inches_ShouldReturn4Inches()
+    {
+        Length inch1=new Length(Unit.INCH, 2.0);
+        Length inch2 = new Length(Unit.INCH,2.0);
+        double addValuesResult = inch1.addValues(inch2);
+        Assert.assertEquals(4.0,addValuesResult,0.0);
+    }
 
+    @Test
+    public void given1Feetand2Inches_ShouldReturn14Inches()
+    {
+        Length feet1=new Length(Unit.FEET, 1.0);
+        Length inch1 = new Length(Unit.INCH,2.0);
+        double addValuesResult = feet1.addValues(inch1);
+        Assert.assertEquals(14.0,addValuesResult,0.0);
+    }
 }
