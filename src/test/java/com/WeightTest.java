@@ -19,4 +19,11 @@ public class WeightTest
         double weightValue = Weight.TONNE.getWeightValue(1.0);
         Assert.assertEquals(1000.0, weightValue, 0.0);
     }
+
+    @Test
+    public void given1000Gram_ShouldReturnInKilogram()
+    {
+        double weightValue = Weight.GRAM.getWeightValue(1000.0);
+        Assert.assertEquals(1.0, weightValue, 0.0);
+    }
 }
