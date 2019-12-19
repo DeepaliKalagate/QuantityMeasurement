@@ -41,4 +41,5 @@ public class QuantityConverter
         double unitValue2 = thatQuantityConverter.quantity.getUnitValue(thatQuantityConverter.value);
         return Double.sum(unitValue1,unitValue2);
     }
+
 }

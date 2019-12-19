@@ -2,7 +2,7 @@ package com;
 
 public enum Temperature
 {
-    CELCIUS(1.0),FARHENHEIT(1.0);
+    CELCIUS(1),FARHENHEIT(1.0);
     public final double conversionFactor;
 
     Temperature(double conversionFactor)
