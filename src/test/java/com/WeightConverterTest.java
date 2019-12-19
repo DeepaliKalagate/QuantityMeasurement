@@ -50,4 +50,14 @@ public class WeightConverterTest {
         Assert.assertTrue(equals);
     }
 
+    @Test
+    public void given1Tonneand1000Grams_ShouldReturn1001KilogramWeight()
+    {
+        WeightConverter tonne1 = new WeightConverter(Weight.TONNE, 1.0);
+        WeightConverter gram1 = new WeightConverter(Weight.GRAM, 1000.0);
+        double result = tonne1.addWeight(gram1);
+        Assert.assertEquals(1001.0,result,0.0);
+    }
+
+
 }
