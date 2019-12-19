@@ -235,4 +235,13 @@ public class LengthTest
         double addValuesResult = feet1.addValues(feet2);
         Assert.assertEquals(24.0,addValuesResult,0.0);
     }
+
+    @Test
+    public void given2Inchesand2nhalfCm_ShouldReturn3Inches()
+    {
+        Length inch1=new Length(Unit.INCH, 2.0);
+        Length centimeter1 = new Length(Unit.CENTIMETER,2.5);
+        double addValuesResult = inch1.addValues(centimeter1);
+        Assert.assertEquals(3.0,addValuesResult,0.0);
+    }
 }
