@@ -41,4 +41,13 @@ public class WeightConverterTest {
         Assert.assertTrue(equals);
     }
 
+    @Test
+    public void given1Tonneand1000Kilograms_ShouldReturnEqualWeight()
+    {
+        WeightConverter tonne1 = new WeightConverter(Weight.TONNE, 1.0);
+        WeightConverter kilogram1 = new WeightConverter(Weight.KILOGRAM, 1000.0);
+        boolean equals = tonne1.compareWeight(kilogram1);
+        Assert.assertTrue(equals);
+    }
+
 }
