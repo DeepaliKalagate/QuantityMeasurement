@@ -22,4 +22,14 @@ public class WeightConverterTest {
         boolean equals = gram1.equals(gram2);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given1Tonneand1Tonne_ShouldReturnEqualWeight()
+    {
+        WeightConverter tonne1 = new WeightConverter(Weight.TONNE, 1.0);
+        WeightConverter tonne2 = new WeightConverter(Weight.TONNE, 1.0);
+        boolean equals = tonne1.equals(tonne2);
+        Assert.assertTrue(equals);
+    }
+
 }
