@@ -32,4 +32,13 @@ public class WeightConverterTest {
         Assert.assertTrue(equals);
     }
 
+    @Test
+    public void given1Kilogramand1000Grams_ShouldReturnEqualWeight()
+    {
+        WeightConverter kilogram1 = new WeightConverter(Weight.KILOGRAM, 1.0);
+        WeightConverter gram1 = new WeightConverter(Weight.GRAM, 1000.0);
+        boolean equals = kilogram1.compareWeight(gram1);
+        Assert.assertTrue(equals);
+    }
+
 }

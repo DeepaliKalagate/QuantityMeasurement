@@ -20,4 +20,11 @@ public class WeightConverter {
         return Double.compare(that.value, value) == 0 &&
                 weight == that.weight;
     }
+
+    public boolean compareWeight(WeightConverter that) {
+        double weightValue = this.weight.getWeightValue(this.value);
+        double weightValue1 = that.weight.getWeightValue(that.value);
+        return Double.compare(weightValue,weightValue1)==0;
+
+    }
 }
