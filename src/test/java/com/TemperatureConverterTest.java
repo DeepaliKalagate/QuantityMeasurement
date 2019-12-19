@@ -20,4 +20,13 @@ public class TemperatureConverterTest {
         boolean equals = temperatureConverter.equals(temperatureConverter1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given212Farhenietand100Celcius_ShouldReturnEqualTemperature() {
+        TemperatureConverter celcius1 = new TemperatureConverter(Temperature.CELCIUS, 100.0);
+        TemperatureConverter farheniet1 = new TemperatureConverter(Temperature.FARHENHEIT, 212.0);
+        boolean equals = celcius1.compare(farheniet1);
+        Assert.assertTrue(equals);
+
+    }
 }

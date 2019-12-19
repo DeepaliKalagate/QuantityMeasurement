@@ -1,11 +1,11 @@
 package com;
-public enum Unit
+public enum Quantity
 {
     FEET(12.0),INCH(1.0),CENTIMETER(1.0/2.5),YARD(36.0),INVALID_ENUM(1.0);
 
     private final double conversionFactor;
 
-     Unit(double conversionFactor)
+     Quantity(double conversionFactor)
      {
         this.conversionFactor = conversionFactor;
     }
