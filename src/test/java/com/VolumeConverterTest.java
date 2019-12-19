@@ -18,7 +18,7 @@ public class VolumeConverterTest {
     public void given1Gallonand3Litres_ShouldReturnEqualQuantity()
     {
         VolumeConverter gallon1 = new VolumeConverter(Volume.GALLON,1.0);
-        VolumeConverter litre1=new VolumeConverter(Volume.LITRE, 3.7850);
+        VolumeConverter litre1=new VolumeConverter(Volume.LITRE, 3.78);
         boolean equals = gallon1.compare(litre1);
         Assert.assertTrue(equals);
     }

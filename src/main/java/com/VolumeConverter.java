@@ -23,8 +23,8 @@ public class VolumeConverter
 
     public boolean compare(VolumeConverter that)
     {
-        double volume1 = (this.volume.getVolumeValue(this.value));
-        double volume2 = (that.volume.getVolumeValue(that.value));
+        double volume1 = Math.round(this.volume.getVolumeValue(this.value));
+        double volume2 = Math.round(that.volume.getVolumeValue(that.value));
         return Double.compare(volume1, volume2)==0;
     }
 
@@ -32,8 +32,7 @@ public class VolumeConverter
     {
         double volume1 = (this.volume.getVolumeValue(this.value));
         double volume2 = (that.volume.getVolumeValue(that.value));
-        double result= Double.sum(volume1, volume2);
-        return result/1000;
+        return  Double.sum(volume1, volume2);
 
     }
 }

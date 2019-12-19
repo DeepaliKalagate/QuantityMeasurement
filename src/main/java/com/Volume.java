@@ -2,7 +2,7 @@ package com;
 
 public enum Volume
 {
-    GALLON(3785.0), LITRE(1000.0),MILI_LITER(1.0);
+    GALLON(3.78), LITRE(1.0),MILI_LITER(1.0/1000.0);
 
     private final double conversionFactor;
     Volume(double conversionFactor)

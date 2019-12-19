@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UnitTest {
+
     @Test
     public void given1Feet_ShouldReturnInInches() {
         double unitValue = Unit.FEET.getUnitValue(1.0);
