@@ -226,4 +226,13 @@ public class LengthTest
         double addValuesResult = feet1.addValues(inch1);
         Assert.assertEquals(14.0,addValuesResult,0.0);
     }
+
+    @Test
+    public void given1Feetand1Feet_ShouldReturn24Inches()
+    {
+        Length feet1=new Length(Unit.FEET, 1.0);
+        Length feet2 = new Length(Unit.FEET,1.0);
+        double addValuesResult = feet1.addValues(feet2);
+        Assert.assertEquals(24.0,addValuesResult,0.0);
+    }
 }
