@@ -18,4 +18,11 @@ public class QuantityTest
         double volume =Quantity.LITRE.getVolumeValue(1.0);
         Assert.assertEquals(1000.0, volume, 0.0);
     }
+
+    @Test
+    public void given1Mililitre_ShouldReturnInMililitre()
+    {
+        double volume =Quantity.MILI_LITER.getVolumeValue(1.0);
+        Assert.assertEquals(1.0, volume, 0.0);
+    }
 }
