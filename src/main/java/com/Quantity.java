@@ -9,7 +9,7 @@ public enum Quantity {
         this.conversionFactor = conversionFactor;
     }
 
-    public double getUnitValue(double value)
+    public double getVolumeValue(double value)
     {
         return this.conversionFactor*value;
     }

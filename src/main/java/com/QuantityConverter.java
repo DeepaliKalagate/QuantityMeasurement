@@ -1,7 +1,5 @@
 package com;
 
-import java.util.Objects;
-
 public class QuantityConverter {
     private double value;
     private Quantity quantity;
@@ -19,5 +17,11 @@ public class QuantityConverter {
         QuantityConverter that = (QuantityConverter) o;
         return Double.compare(that.value, value) == 0 &&
                 quantity == that.quantity;
+    }
+
+    public boolean compare(QuantityConverter that) {
+        double volume1 = Math.round(this.quantity.getVolumeValue(this.value));
+        double volume2 = Math.round(that.quantity.getVolumeValue(that.value));
+        return Double.compare(volume1, volume2)==0;
     }
 }
