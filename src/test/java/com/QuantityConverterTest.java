@@ -40,4 +40,13 @@ public class QuantityConverterTest {
         boolean equals = gallon1.compare(mililitre1);
         Assert.assertTrue(equals);
     }
+
+    @Test
+    public void given1GallonandRound4liter_ShouldReturnRound8Litres()
+    {
+        QuantityConverter gallon1 = new QuantityConverter(Quantity.GALLON,1.0);
+        QuantityConverter litre1=new QuantityConverter(Quantity.LITRE, 3.78);
+        double equals = gallon1.addVolume(litre1);
+        Assert.assertEquals(7.57,equals,1.0);
+    }
 }
