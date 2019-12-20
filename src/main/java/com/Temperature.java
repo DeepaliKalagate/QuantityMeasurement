@@ -1,5 +1,4 @@
 package com;
-
 public enum Temperature
 {
     CELCIUS(1),FARHENHEIT(1.0);
@@ -13,5 +12,4 @@ public enum Temperature
     {
        return  this.conversionFactor*value;
     }
-
 }

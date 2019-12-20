@@ -1,16 +1,18 @@
 package com;
-
-public class TemperatureConverter {
+public class TemperatureConverter
+{
     private double value;
     private Temperature temperature;
 
-    public TemperatureConverter(Temperature temperature, double value) {
+    public TemperatureConverter(Temperature temperature, double value)
+    {
         this.temperature = temperature;
         this.value = value;
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o)
+    {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TemperatureConverter that = (TemperatureConverter) o;
@@ -18,8 +20,10 @@ public class TemperatureConverter {
                 temperature == that.temperature;
     }
 
-    public boolean compare(TemperatureConverter that) {
-        if (this.temperature.equals(Temperature.CELCIUS)) {
+    public boolean compare(TemperatureConverter that)
+    {
+        if (this.temperature.equals(Temperature.CELCIUS))
+        {
             Double number = this.value * 9 / 5 + 32;
             Double value = that.value;
             return Double.compare(number, value) == 0;

@@ -1,33 +1,37 @@
 package com;
-
 import org.junit.Assert;
 import org.junit.Test;
 
-public class QuantityEnumTypesTest {
-
-        @Test
-        public void given1Feet_ShouldReturnInInches() {
+public class QuantityEnumTypesTest
+{
+    @Test
+    public void given1Feet_ShouldReturnInInches()
+    {
         double unitValue = QuantityEnumTypes.FEET.getUnitValue(1.0);
         Assert.assertEquals(12.0, unitValue, 0.0);
     }
 
-        @Test
-        public void given12Inch_ShouldReturn12Inch() {
+    @Test
+    public void given12Inch_ShouldReturn12Inch()
+    {
         double unitValue = QuantityEnumTypes.INCH.getUnitValue(12.0);
         Assert.assertEquals(12.0, unitValue, 0.0);
     }
 
-        @Test
-        public void given1cm_ShouldReturnInInches() {
+    @Test
+    public void given1cm_ShouldReturnInInches()
+    {
         double unitValue = Math.round(QuantityEnumTypes.CENTIMETER.getUnitValue(1.0));
         Assert.assertEquals(0.0, unitValue, 0.0);
     }
 
-        @Test
-        public void given1Yard_ShouldReturnInInches() {
+    @Test
+    public void given1Yard_ShouldReturnInInches()
+    {
         double unitValue = QuantityEnumTypes.YARD.getUnitValue(1.0);
         Assert.assertEquals(36.0, unitValue, 0.0);
     }
+
     @Test
     public void given1Gallon_ShouldReturnInlitre()
     {

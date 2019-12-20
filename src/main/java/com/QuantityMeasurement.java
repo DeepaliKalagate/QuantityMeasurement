@@ -1,12 +1,12 @@
 package com;
-
-public class QuantityMeasurement {
-
+public class QuantityMeasurement
+{
     public QuantityEnumTypes quantity;
     public double value;
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o)
+    {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         QuantityMeasurement that = (QuantityMeasurement) o;
