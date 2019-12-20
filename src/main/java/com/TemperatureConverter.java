@@ -20,8 +20,9 @@ public class TemperatureConverter
                 temperature == that.temperature;
     }
 
-    public boolean compare(TemperatureConverter that)
+    public boolean  compare(TemperatureConverter that)
     {
+
         if (this.temperature.equals(Temperature.CELCIUS))
         {
             Double number = this.value * 9 / 5 + 32;

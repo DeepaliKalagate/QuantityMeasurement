@@ -1,15 +1,15 @@
 package com;
 public enum Temperature
 {
-    CELCIUS(1),FARHENHEIT(1.0);
-    public final double conversionFactor;
+    CELCIUS(1.0),FARHENHEIT(1.0);
+    public final Double conversionFactor;
 
-    Temperature(double conversionFactor)
+    Temperature(Double conversionFactor)
     {
         this.conversionFactor = conversionFactor;
     }
-    public double getTemperatureValue(double value)
+    public Double getTemperatureValue(Double value)
     {
-       return  this.conversionFactor*value;
+      return  this.conversionFactor*value;
     }
 }
