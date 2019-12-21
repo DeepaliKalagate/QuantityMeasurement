@@ -4,7 +4,7 @@ import java.util.Objects;
 public class QuantityMeasurement
 {
     public Double value;
-    public final QuantityInterface quantity;
+    public QuantityInterface quantity;
 
     public QuantityMeasurement(QuantityInterface quantity, Double value)
     {

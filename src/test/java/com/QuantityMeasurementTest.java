@@ -7,17 +7,17 @@ public class QuantityMeasurementTest
     @Test
     public void given0Feetand0Feet_ShouldReturnEqual()
     {
-        QuantityMeasurement QuantityMeasurement1 = new QuantityMeasurement(Quantity.FEET,0.0);
-        QuantityMeasurement QuantityMeasurement2 = new QuantityMeasurement(Quantity.FEET,0.0);
-        Assert.assertEquals(QuantityMeasurement1, QuantityMeasurement2);
+        QuantityMeasurement quantityMeasurement1 = new QuantityMeasurement(Quantity.FEET,0.0);
+        QuantityMeasurement quantityMeasurement2 = new QuantityMeasurement(Quantity.FEET,0.0);
+        Assert.assertEquals(quantityMeasurement1, quantityMeasurement2);
     }
 
     @Test
     public void given0Feetand1Feet_ShouldReturnNotEqual()
     {
-        QuantityMeasurement QuantityMeasurement1 = new QuantityMeasurement(Quantity.FEET,0.0);
-        QuantityMeasurement QuantityMeasurement2 = new QuantityMeasurement(Quantity.FEET,1.0);
-        boolean equals = QuantityMeasurement1.equals(QuantityMeasurement2);
+        QuantityMeasurement quantityMeasurement1 = new QuantityMeasurement(Quantity.FEET,0.0);
+        QuantityMeasurement quantityMeasurement2 = new QuantityMeasurement(Quantity.FEET,1.0);
+        boolean equals = quantityMeasurement1.equals(quantityMeasurement2);
         Assert.assertFalse(equals);
     }
 
